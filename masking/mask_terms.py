@@ -56,7 +56,7 @@ class TermMasker:
                 pattern, label = line.rstrip().split('|||')
                 pattern = pattern.strip()
                 label = label.strip()
-                pattern = ' ' + pattern + ' '
+                # pattern = ' ' + pattern + ' '
                 self.patterns.append((pattern, label))
 
     def unmask(self, output, orig_source, masked_source):
@@ -93,9 +93,11 @@ class TermMasker:
                     labelstr = get_mask(label, indices[label]) if self.add_index else get_mask(label)
                     labelstr = ' {} '.format(labelstr)
 
-                    source = source.replace(m.group(), labelstr, 1)
+                    # source = source.replace(m.group(), labelstr, 1)
+                    source = re.sub(pattern, labelstr, source, 1)
                     if target is not None:
-                        target = target.replace(m.group(), labelstr, 1)
+                        # target = target.replace(m.group(), labelstr, 1)
+                        target = re.sub(pattern, labelstr, target, 1)
                     self.counts[label] += 1
                 else:
                     self.counts_missed[label] += 1
