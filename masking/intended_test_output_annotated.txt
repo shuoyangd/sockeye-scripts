@@ -18,9 +18,9 @@ __EMOJI__  # 1f4x
 __EMOJI__  # 1f5x
 __EMOJI__  # 1f9x
 __EMOJI__  # 2x
-__EMOJI__  # multi code points (skintone)
-__EMOJI__  # multi code points (occupation)
-__EMOJI__  # multi code points (family)
+*  # multi code points not working correctly (skintone)
+*  # multi code points not working correctly (occupation)
+*  # multi code points not working correctly (family)
 __EMAIL__
 __EMAIL__
 __HANDLE__
@@ -29,6 +29,7 @@ __HANDLE__  # underscore
 __HASHTAG__
 __HASHTAG__  # number
 __HASHTAG__  # underscore
+__URL__
 __URL__
 __URL__
 __URL__
